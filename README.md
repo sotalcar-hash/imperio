@@ -1,15 +1,18 @@
-Sotalcalcular — Versión Streamlit (lista para reemplazar app.py)
+Sotalcalcular — versión corregida (mínima CSS)
 
-Qué hace: pequeña app Streamlit compacta con estilo neomórfico. Mantiene 'Situación Actual' y 'Resultados' (Acertado/Fallado/Nulo). 
+Motivo del cambio:
+- Se eliminaron estilos agresivos que podían interferir con los inputs de Streamlit y provocar que los campos no fueran editables.
+- Esta versión usa solo CSS seguro (botones y métricas) y mantiene la lógica previa.
 
-Pasos para actualizar tu repo (GUI, sin git):
+Instrucciones (muy sencillas):
 1. Descarga este ZIP y descomprímelo.
 2. Entra en tu repositorio en GitHub.
-3. Pulsa "Add file" -> "Upload files".
-4. Arrastra `app.py` y `requirements.txt` y confirma con "Commit changes".
-   (Si te pregunta sobre reemplazar archivos, acepta reemplazar app.py).
-5. Entra en Streamlit Cloud (https://streamlit.io/cloud), abre tu app y dale a "Deploy" o espera a que Streamlit detecte el nuevo commit y se redepliegue automáticamente.
+3. Pulsa "Add file" -> "Upload files". Arrastra `app.py` y `requirements.txt` y confirma con "Commit changes". Acepta reemplazar app.py si se te pide.
+4. En Streamlit Cloud selecciona tu app y fuerza un "Rerun" o espera a que detecte el commit y se redepliegue.
+5. Si sigues viendo el error `TypeError: error loading dynamically imported module`, prueba estos pasos:
+   - Pulsa "Rerun" en Streamlit Cloud.
+   - Abre la app en modo incógnito o limpia la caché del navegador (Ctrl/Cmd+Shift+R).
+   - Revisa los Logs de la app en Streamlit Cloud (tres puntos -> Logs) y copia el mensaje si persiste.
+   - Si el problema continúa, dime y yo investigo el log y lo soluciono.
 
-Si prefieres que mantenga también la versión estática (index.html) en otra rama para GitHub Pages, dímelo y la preparo.
-
-Nota: Si quieres sincronizar la "Situación Actual" para que lo vean dos personas a la vez guardado en la nube, tengo que integrar Google Sheets o una pequeña base de datos; dímelo y te lo preparo.
+Si quieres que añada el estilo neomórfico con seguridad (sin romper inputs), lo implemento progresivamente en pequeñas iteraciones y te doy el ZIP listo para subir.
